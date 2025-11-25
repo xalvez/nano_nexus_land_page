@@ -1,0 +1,539 @@
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scale In Animation */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Slide In Left */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Hover Animations */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Pulse Effect */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(92, 107, 156, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(92, 107, 156, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(92, 107, 156, 0);
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Apply animations to sections */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* GPU Optimized Animations */
+@keyframes fadeInUpGPU {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 60px, 0) scale3d(0.95, 0.95, 1);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  }
+}
+
+@keyframes slideInFromLeftGPU {
+  from {
+    opacity: 0;
+    transform: translate3d(-80px, 0, 0) rotate3d(0, 1, 0, -15deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotate3d(0, 1, 0, 0);
+  }
+}
+
+@keyframes slideInFromRightGPU {
+  from {
+    opacity: 0;
+    transform: translate3d(80px, 0, 0) rotate3d(0, 1, 0, 15deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotate3d(0, 1, 0, 0);
+  }
+}
+
+@keyframes scaleInGPU {
+  from {
+    opacity: 0;
+    transform: scale3d(0.8, 0.8, 1) rotate3d(1, 0, 0, 90deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1) rotate3d(1, 0, 0, 0);
+  }
+}
+
+@keyframes floatGPU {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate3d(1, 1, 0, 0deg);
+  }
+  33% {
+    transform: translate3d(0, -15px, 0) rotate3d(1, 1, 0, 120deg);
+  }
+  66% {
+    transform: translate3d(0, -8px, 0) rotate3d(1, 1, 0, 240deg);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 20px rgba(92, 107, 156, 0.3),
+      0 0 40px rgba(92, 107, 156, 0.2),
+      0 0 60px rgba(92, 107, 156, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 0 30px rgba(92, 107, 156, 0.4),
+      0 0 60px rgba(92, 107, 156, 0.3),
+      0 0 90px rgba(92, 107, 156, 0.2);
+  }
+}
+
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(92, 107, 156, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(92, 107, 156, 0.8), 0 0 30px rgba(92, 107, 156, 0.6);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Animation Classes with GPU Optimization */
+.animate-fade-in-up {
+  opacity: 0;
+  transform: translate3d(0, 60px, 0) scale3d(0.95, 0.95, 1);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.animate-fade-in-up.visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+}
+
+.animate-slide-left {
+  opacity: 0;
+  transform: translate3d(-80px, 0, 0) rotate3d(0, 1, 0, -15deg);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity;
+}
+
+.animate-slide-left.visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) rotate3d(0, 1, 0, 0);
+}
+
+.animate-slide-right {
+  opacity: 0;
+  transform: translate3d(80px, 0, 0) rotate3d(0, 1, 0, 15deg);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity;
+}
+
+.animate-slide-right.visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) rotate3d(0, 1, 0, 0);
+}
+
+.animate-scale-in {
+  opacity: 0;
+  transform: scale3d(0.8, 0.8, 1) rotate3d(1, 0, 0, 90deg);
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform, opacity;
+}
+
+.animate-scale-in.visible {
+  opacity: 1;
+  transform: scale3d(1, 1, 1) rotate3d(1, 0, 0, 0);
+}
+
+/* Staggered Animation Delays */
+.stagger-item {
+  opacity: 0;
+  transform: translate3d(0, 30px, 0);
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity;
+}
+
+.stagger-item.visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Generate delay classes for staggered items */
+.stagger-delay-1 { transition-delay: 0.1s; }
+.stagger-delay-2 { transition-delay: 0.2s; }
+.stagger-delay-3 { transition-delay: 0.3s; }
+.stagger-delay-4 { transition-delay: 0.4s; }
+.stagger-delay-5 { transition-delay: 0.5s; }
+.stagger-delay-6 { transition-delay: 0.6s; }
+
+/* Floating elements */
+.floating-gpu {
+  animation: floatGPU 6s ease-in-out infinite;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Glow effects */
+.glow-on-hover {
+  transition: all 0.3s ease;
+}
+
+.glow-on-hover:hover {
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+.text-glow {
+  animation: textGlow 3s ease-in-out infinite;
+}
+
+/* Gradient backgrounds */
+.animated-gradient {
+  background: linear-gradient(-45deg, #5C6B9C, #6B7BB3, #8B9BD6, #A5B4FC);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+}
+
+
+
+/* Shape Reveal Animations */
+@keyframes shapeReveal {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    opacity: 0;
+  }
+  50% {
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+    opacity: 0.7;
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 1;
+  }
+}
+
+@keyframes shapeRevealFromCenter {
+  0% {
+    clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+    transform: scale(0.5);
+  }
+  50% {
+    clip-path: polygon(25% 25%, 75% 25%, 75% 75%, 25% 75%);
+    transform: scale(0.8);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: scale(1);
+  }
+}
+
+@keyframes diagonalReveal {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  50% {
+    clip-path: polygon(0 0, 50% 0, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes circleReveal {
+  0% {
+    clip-path: circle(0% at 50% 50%);
+    opacity: 0;
+  }
+  50% {
+    clip-path: circle(25% at 50% 50%);
+    opacity: 0.8;
+  }
+  100% {
+    clip-path: circle(75% at 50% 50%);
+    opacity: 1;
+  }
+}
+
+/* Glowing Effects */
+@keyframes intenseGlow {
+  0%, 100% {
+    box-shadow: 
+      0 0 20px rgba(92, 107, 156, 0.4),
+      0 0 40px rgba(92, 107, 156, 0.3),
+      0 0 60px rgba(92, 107, 156, 0.2),
+      inset 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 0 30px rgba(92, 107, 156, 0.6),
+      0 0 60px rgba(92, 107, 156, 0.4),
+      0 0 90px rgba(92, 107, 156, 0.3),
+      inset 0 0 30px rgba(255, 255, 255, 0.2);
+  }
+}
+
+@keyframes borderGlow {
+  0%, 100% {
+    border-color: rgba(92, 107, 156, 0.3);
+    box-shadow: 0 0 10px rgba(92, 107, 156, 0.2);
+  }
+  50% {
+    border-color: rgba(92, 107, 156, 0.8);
+    box-shadow: 0 0 20px rgba(92, 107, 156, 0.4), 0 0 40px rgba(92, 107, 156, 0.2);
+  }
+}
+
+@keyframes lightBeam {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(200%) skewX(-15deg);
+    opacity: 0;
+  }
+}
+
+@keyframes particleFloat {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate3d(100px, -50px, 0) rotate(180deg);
+  }
+}
+
+/* Shape Reveal Classes */
+.shape-reveal {
+  opacity: 0;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: clip-path, opacity, transform;
+}
+
+.shape-reveal.visible {
+  opacity: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.shape-reveal-center {
+  opacity: 0;
+  clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+  transform: scale(0.5);
+  transition: all 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: clip-path, opacity, transform;
+}
+
+.shape-reveal-center.visible {
+  opacity: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transform: scale(1);
+}
+
+/* Glowing Elements */
+.glow-box {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(92, 107, 156, 0.3);
+  transition: all 0.4s ease;
+}
+
+.glow-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(92, 107, 156, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.glow-box:hover::before {
+  left: 100%;
+}
+
+.glow-box.intense-glow {
+  animation: intenseGlow 3s ease-in-out infinite;
+}
+
+.glow-box.border-glow {
+  animation: borderGlow 4s ease-in-out infinite;
+}
+
+/* Light Beam Effect */
+.light-beam {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: lightBeam 3s ease-in-out infinite;
+}
+
+/* Floating Particles */
+.floating-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(92, 107, 156, 0.6);
+  border-radius: 50%;
+  animation: particleFloat 6s ease-in-out infinite;
+}
+
+/* Progress-based reveal for shapes */
+.shape-progress-reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+.shape-progress-reveal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  transition: clip-path 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: -1;
+}
+
+.shape-progress-reveal.reveal-50::before {
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+.shape-progress-reveal.reveal-100::before {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Section Title Fixes */
+.section-title-fixed {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: textGlow 4s ease-in-out infinite;
+}
+
+.section-header-fixed {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+
+
+
+
+
+
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
