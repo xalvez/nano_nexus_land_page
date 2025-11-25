@@ -1,0 +1,249 @@
+/* 3D Card Base Styles */
+.card-3d {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+}
+
+.card-3d-content {
+  transform-style: preserve-3d;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* 3D Hover Effects */
+.card-3d:hover {
+  transform: translateZ(20px);
+}
+
+.card-3d:hover .card-3d-content {
+  transform: 
+    rotateY(calc(var(--mouse-x) * 15deg)) 
+    rotateX(calc(var(--mouse-y) * -15deg))
+    translateZ(30px);
+}
+
+/* 3D Card with Glass Morphism */
+.card-3d-glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 25px;
+  box-shadow: 
+    var(--glass-shadow),
+    0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform-style: preserve-3d;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-3d-glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  transform: translateZ(-1px);
+}
+
+.card-3d-glass:hover::before {
+  opacity: 1;
+}
+
+.card-3d-glass:hover {
+  transform: 
+    translateZ(30px)
+    rotateY(calc(var(--mouse-x) * 8deg))
+    rotateX(calc(var(--mouse-y) * -8deg));
+  box-shadow: 
+    0 35px 60px -12px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* 3D Depth Layers */
+.card-3d-layer-1 {
+  transform: translateZ(20px);
+}
+
+.card-3d-layer-2 {
+  transform: translateZ(40px);
+}
+
+.card-3d-layer-3 {
+  transform: translateZ(60px);
+}
+
+/* 3D Floating Elements */
+.card-3d-floating {
+  animation: float3D 6s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+@keyframes float3D {
+  0%, 100% {
+    transform: 
+      translate3d(0, 0, 0) 
+      rotate3d(1, 1, 0, 0deg);
+  }
+  33% {
+    transform: 
+      translate3d(0, -10px, 20px) 
+      rotate3d(1, 1, 0, 120deg);
+  }
+  66% {
+    transform: 
+      translate3d(0, -5px, 10px) 
+      rotate3d(1, 1, 0, 240deg);
+  }
+}
+
+/* 3D Shadow Effect */
+.card-3d-shadow {
+  position: relative;
+}
+
+.card-3d-shadow::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 80%;
+  height: 20px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4) 0%, transparent 70%);
+  transform: translateX(-50%) translateZ(-50px);
+  filter: blur(10px);
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-3d-shadow:hover::after {
+  opacity: 0.6;
+  transform: translateX(-50%) translateZ(-30px) scale(1.1);
+}
+
+/* 3D Border Glow */
+.card-3d-glow {
+  position: relative;
+}
+
+.card-3d-glow::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    var(--accent-1),
+    var(--accent-2),
+    var(--accent-1)
+  );
+  border-radius: 27px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  transform: translateZ(-10px);
+}
+
+.card-3d-glow:hover::before {
+  opacity: 0.6;
+}
+
+/* 3D Icon Effects */
+.icon-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  display: inline-block;
+}
+
+.card-3d:hover .icon-3d {
+  transform: 
+    translateZ(40px)
+    rotateY(180deg)
+    scale(1.2);
+}
+
+/* 3D Text Effects */
+.text-3d {
+  text-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.4),
+    0 2px 0 rgba(255, 255, 255, 0.2),
+    0 3px 0 rgba(255, 255, 255, 0.1);
+  transform: translateZ(20px);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-3d:hover .text-3d {
+  text-shadow: 
+    0 2px 0 rgba(255, 255, 255, 0.4),
+    0 4px 0 rgba(255, 255, 255, 0.2),
+    0 6px 0 rgba(255, 255, 255, 0.1);
+  transform: translateZ(40px);
+}
+
+/* 3D Button */
+.button-3d {
+  transform-style: preserve-3d;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.button-3d::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  border-radius: inherit;
+  transform: translateZ(-5px);
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.button-3d:hover::before {
+  transform: translateZ(0);
+}
+
+.button-3d:hover {
+  transform: translateY(-2px) translateZ(10px);
+  box-shadow: 
+    0 10px 25px rgba(92, 107, 156, 0.3),
+    0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 3D Card Variations */
+.card-3d-tilt {
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-3d-tilt:hover {
+  transform: 
+    rotateY(15deg) 
+    rotateX(10deg)
+    translateZ(20px);
+}
+
+.card-3d-lift {
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-3d-lift:hover {
+  transform: translateY(-20px) translateZ(30px);
+}

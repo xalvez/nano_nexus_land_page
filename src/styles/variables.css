@@ -1,0 +1,55 @@
+:root {
+  /* Light Theme */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8FAFC;
+  --text-primary: #2D3748;
+  --text-secondary: #4A5568;
+  --accent-1: #5C6B9C;
+  --accent-2: #4A5A8C;
+  --border-color: #E2E8F0;
+  --button-bg: #5C6B9C;
+  --button-text: #FFFFFF;
+  
+  /* Typography */
+  --font-logo: 'Poppins', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #1A1A1A;
+  --bg-secondary: #2D3748;
+  --text-primary: #F7FAFC;
+  --text-secondary: #E2E8F0;
+  --accent-1: #6B7BB3;
+  --accent-2: #5C6B9C;
+  --border-color: #4A5568;
+  --button-bg: #6B7BB3;
+  --button-text: #FFFFFF;
+}
+
+
+:root {
+  /* Existing variables... */
+  
+  /* Glass Morphism Variables */
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --glass-blur: blur(20px);
+  --glass-backdrop: backdrop-filter(20px);
+}
+
+[data-theme="dark"] {
+  /* Dark theme glass variables */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+

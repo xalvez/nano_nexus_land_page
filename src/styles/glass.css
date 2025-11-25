@@ -1,0 +1,212 @@
+/* Glass Morphism Base Classes */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  box-shadow: var(--glass-shadow);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.glass-card:hover::before {
+  opacity: 1;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 15px 40px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Glass Card Variants */
+.glass-card-primary {
+  background: linear-gradient(
+    135deg,
+    rgba(92, 107, 156, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  border: 1px solid rgba(92, 107, 156, 0.2);
+}
+
+.glass-card-secondary {
+  background: linear-gradient(
+    135deg,
+    rgba(106, 123, 179, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  border: 1px solid rgba(106, 123, 179, 0.2);
+}
+
+.glass-card-accent {
+  background: linear-gradient(
+    135deg,
+    rgba(139, 155, 214, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  border: 1px solid rgba(139, 155, 214, 0.2);
+}
+
+/* Glass Button */
+.glass-button {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 50px;
+  color: var(--text-primary);
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.glass-button:hover::before {
+  left: 100%;
+}
+
+.glass-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Glass Input */
+.glass-input {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 1rem;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  transition: all 0.3s ease;
+}
+
+.glass-input:focus {
+  outline: none;
+  border-color: var(--accent-1);
+  box-shadow: 0 0 0 3px rgba(92, 107, 156, 0.1);
+}
+
+.glass-input::placeholder {
+  color: var(--text-secondary);
+}
+
+/* Glass Panel */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 25px;
+  box-shadow: var(--glass-shadow);
+  padding: 2rem;
+}
+
+/* Enhanced Glass Effects */
+.glass-card-glow {
+  position: relative;
+}
+
+.glass-card-glow::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    var(--accent-1),
+    var(--accent-2),
+    var(--accent-1)
+  );
+  border-radius: 22px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.glass-card-glow:hover::after {
+  opacity: 0.3;
+}
+
+/* Glass Morphism with Blur Overlay */
+.glass-with-overlay {
+  position: relative;
+}
+
+.glass-with-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+
+
+
+/* // Basic glass card
+<div className="glass-card">
+  Your content here
+</div>
+
+// With glow effect
+<div className="glass-card glass-card-glow">
+  Your content here
+</div>
+
+// With variant
+<div className="glass-card glass-card-primary">
+  Your content here
+</div>
+
+// Glass button
+<button className="glass-button">
+  Click me
+</button>
+
+// Glass input
+<input className="glass-input" placeholder="Type something..." /> */
