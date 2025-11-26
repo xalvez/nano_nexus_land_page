@@ -105,7 +105,7 @@ const Contact = () => {
               <h4>Follow Us</h4>
               <div className="social-grid">
                 {['Twitter', 'LinkedIn', 'GitHub', 'Instagram'].map((social, index) => (
-                  <a key={index} href="#" className="social-link glow-on-hover">
+                  <a key={index} href="http://localhost:3000/Nano_Nexus_Landing_page" className="social-link glow-on-hover">
                     <span className="social-icon">
                       {social === 'Twitter' ? '🐦' : 
                        social === 'LinkedIn' ? '💼' : 

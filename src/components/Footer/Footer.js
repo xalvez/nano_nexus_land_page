@@ -13,10 +13,10 @@ const Footer = () => {
               and digital transformation.
             </p>
             <div className="social-links">
-              <a href="#" aria-label="Twitter">🐦</a>
-              <a href="#" aria-label="LinkedIn">💼</a>
-              <a href="#" aria-label="GitHub">🐱</a>
-              <a href="#" aria-label="Instagram">📷</a>
+              <a href="http://localhost:3000/Nano_Nexus_Landing_page" aria-label="Twitter">🐦</a>
+              <a href="http://localhost:3000/Nano_Nexus_Landing_page" aria-label="LinkedIn">💼</a>
+              <a href="http://localhost:3000/Nano_Nexus_Landing_page" aria-label="GitHub">🐱</a>
+              <a href="http://localhost:3000/Nano_Nexus_Landing_page" aria-label="Instagram">📷</a>
             </div>
           </div>
           <div className="footer-section">
@@ -32,10 +32,10 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Services</h4>
             <ul>
-              <li><a href="#">Web Development</a></li>
-              <li><a href="#">Mobile Apps</a></li>
-              <li><a href="#">Cloud Solutions</a></li>
-              <li><a href="#">Custom Software</a></li>
+              <li><a href="http://localhost:3000/Nano_Nexus_Landing_page">Web Development</a></li>
+              <li><a href="http://localhost:3000/Nano_Nexus_Landing_page">Mobile Apps</a></li>
+              <li><a href="http://localhost:3000/Nano_Nexus_Landing_page">Cloud Solutions</a></li>
+              <li><a href="http://localhost:3000/Nano_Nexus_Landing_page">Custom Software</a></li>
             </ul>
           </div>
           <div className="footer-section">

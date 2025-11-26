@@ -9,8 +9,8 @@ const ThreeDCard = ({
   withGlow = true,
   ...props 
 }) => {
-  const [cardRef, mousePosition] = useMouse3D();
-
+  const [cardRef] = useMouse3D();
+// not used _^^^^ (mousePosition) 
   const getCardClass = () => {
     let baseClass = 'card-3d';
     
