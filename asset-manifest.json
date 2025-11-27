@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Nano_Nexus_Landing_page/static/css/main.f65da2e2.css",
-    "main.js": "/Nano_Nexus_Landing_page/static/js/main.ca596ca4.js",
+    "main.css": "/Nano_Nexus_Landing_page/static/css/main.cc1b10eb.css",
+    "main.js": "/Nano_Nexus_Landing_page/static/js/main.03a55ba4.js",
     "index.html": "/Nano_Nexus_Landing_page/index.html",
-    "main.f65da2e2.css.map": "/Nano_Nexus_Landing_page/static/css/main.f65da2e2.css.map",
-    "main.ca596ca4.js.map": "/Nano_Nexus_Landing_page/static/js/main.ca596ca4.js.map"
+    "main.cc1b10eb.css.map": "/Nano_Nexus_Landing_page/static/css/main.cc1b10eb.css.map",
+    "main.03a55ba4.js.map": "/Nano_Nexus_Landing_page/static/js/main.03a55ba4.js.map"
   },
   "entrypoints": [
-    "static/css/main.f65da2e2.css",
-    "static/js/main.ca596ca4.js"
+    "static/css/main.cc1b10eb.css",
+    "static/js/main.03a55ba4.js"
   ]
 }
